@@ -6,10 +6,9 @@
 
 // function declarations
 char letterFromPosition(int);
-int positionFromLetter(char);
 
 // main function
-int main(int argc, char *argv[])
+int main()
 {
     // get text file name from user
     char fileName[FILE_NAME_LENGTH];
@@ -27,7 +26,7 @@ int main(int argc, char *argv[])
     FILE *filePointer;
     if ((filePointer = fopen(fileNamePointer, "r")) == NULL)
     {
-        printf("Could not open file");
+        printf("Error: Could not find your file");
         // exit program
         exit(1);
     }
@@ -272,95 +271,4 @@ char letterFromPosition(int position)
         break;
     }
     return letter;
-}
-
-// takes a letter and returns the integer representation of it
-int positionFromLetter(char letter)
-{
-    int position;
-    switch (toupper(letter))
-    {
-    case 'A':
-        position = 0;
-        break;
-    case 'B':
-        position = 1;
-        break;
-    case 'C':
-        position = 2;
-        break;
-    case 'D':
-        position = 3;
-        break;
-    case 'E':
-        position = 4;
-        break;
-    case 'F':
-        position = 5;
-        break;
-    case 'G':
-        position = 6;
-        break;
-    case 'H':
-        position = 7;
-        break;
-    case 'I':
-        position = 8;
-        break;
-    case 'J':
-        position = 9;
-        break;
-    case 'K':
-        position = 10;
-        break;
-    case 'L':
-        position = 11;
-        break;
-    case 'M':
-        position = 12;
-        break;
-    case 'N':
-        position = 13;
-        break;
-    case 'O':
-        position = 14;
-        break;
-    case 'P':
-        position = 15;
-        break;
-    case 'Q':
-        position = 16;
-        break;
-    case 'R':
-        position = 17;
-        break;
-    case 'S':
-        position = 18;
-        break;
-    case 'T':
-        position = 19;
-        break;
-    case 'U':
-        position = 20;
-        break;
-    case 'V':
-        position = 21;
-        break;
-    case 'W':
-        position = 22;
-        break;
-    case 'X':
-        position = 23;
-        break;
-    case 'Y':
-        position = 24;
-        break;
-    case 'Z':
-        position = 25;
-        break;
-
-    default:
-        break;
-    }
-    return position;
 }
